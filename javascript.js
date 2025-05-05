@@ -91,7 +91,7 @@ function playGame() {
     // create helper function to determine number of rounds
     function gameRounds(numberOfRounds) {
         // repeat number of rounds 5 times, think of iteration without using a loop
-        if (numberOfRounds > 3) { // if it gets to the last round
+        if (numberOfRounds > 5) { // if it gets to the last round
             // announce result of humanScore vs computerScore
             if (humanScore > computerScore) {
                 console.log("\nYou won the game! Congratulations!!");
