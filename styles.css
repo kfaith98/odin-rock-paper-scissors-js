@@ -16,23 +16,42 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: white;
+    background: #F4E7E1;
     width: 700px;
-    height: 400px;
+    height: auto;
     border-radius: 10px;
     box-shadow: 2px 4px 16px rgba(0,0,0,.2);
     padding: 16px;
 }
 
-/* Game title */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Game title & subtitle*/
 .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:#521C0D;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 400px;
+    color: #F4E7E1;
+}
+
+.title {
     font-size: 25px;
     font-weight: 700;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.subheader {
+.subtitle {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -41,15 +60,36 @@ body {
     margin-bottom: 20px;
 }
 
+.result {
+    margin-bottom: 20px;
+}
+
 /* Score board */
 .player-score {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: black;
     border: 3px solid black;
-    width: 200px;
-    font-size: 4rem;
-    padding: 10px 5px;
+    width: 400px;
+    font-size: 2rem;
+    padding: 20px 10px;
     position: relative;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.player-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+}
+
+#user-choice,
+#computer-choice {
+    font-size: 1rem;
+    margin-top: 10px;
 }
 
 .badge{
@@ -60,23 +100,35 @@ body {
     border-radius: 12px;
 }
 
-#computer-badge{
-    position: absolute;
-    margin-top: 10px;
-    left: -75px;
-}
-
-#user-badge{
-    position: absolute;
-    margin-top: 10px;
-    right: -70px;
-}
-
-.buttons {
-    gap: 10px;
+/* RPS buttons */
+#rock, #paper, #scissors, #reset {
+    background: #D5451B;
+    color: white;
+    font-size: 20px;
+    padding: 5px 5px;
+    cursor: pointer;
+    outline: none;    
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px #999;
     margin-bottom: 20px;
 }
 
-.player-choice, .result, .player-score {
-    margin-bottom: 10px;
+#rock:hover, #paper:hover, #scissors:hover, #reset:hover {
+    background-color: #CB0404
+}
+
+#rock.disabled,
+#paper.disabled,
+#scissors.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+#reset {
+    background: #FF9B45;
+    color: white;
+    font-size: 20px;
+    padding: 5px 5px;
+    border-radius: 10px;
 }

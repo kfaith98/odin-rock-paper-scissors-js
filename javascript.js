@@ -103,8 +103,9 @@ function playGame(humanSelection) {
         paper.disabled = true;
         scissors.disabled = true;
 
-        const resetButton = document.querySelector("#reset");
-        resetButton.style.display = "inline";
+        rock.classList.add("disabled");
+        paper.classList.add("disabled");
+        scissors.classList.add("disabled");
     }
 }
 
@@ -115,13 +116,15 @@ resetButton.addEventListener("click", () => {
 
     document.querySelector("#user-score").textContent = "0";
     document.querySelector("#computer-score").textContent = "0";
-    document.querySelector("#user-choice").textContent = "You chose: ?";
-    document.querySelector("#computer-choice").textContent = "CPU chose: ?";
+    document.querySelector("#user-choice").innerHTML = "You chose:<br>?";
+    document.querySelector("#computer-choice").innerHTML = "CPU chose:<br>?";
     document.querySelector(".result").textContent = "Awaiting result...";
 
     rock.disabled = false;
     paper.disabled = false;
     scissors.disabled = false;
 
-    resetButton.style.display = "none";
+    rock.classList.remove("disabled");
+    paper.classList.remove("disabled");
+    scissors.classList.remove("disabled");
 });
