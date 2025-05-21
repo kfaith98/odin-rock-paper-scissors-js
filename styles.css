@@ -17,12 +17,14 @@ body {
     align-items: center;
     justify-content: center;
     background: white;
-    width: 480px;
+    width: 700px;
+    height: 400px;
     border-radius: 10px;
     box-shadow: 2px 4px 16px rgba(0,0,0,.2);
     padding: 16px;
 }
 
+/* Game title */
 .header {
     font-size: 25px;
     font-weight: 700;
@@ -37,6 +39,37 @@ body {
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+}
+
+/* Score board */
+.player-score {
+    text-align: center;
+    color: black;
+    border: 3px solid black;
+    width: 200px;
+    font-size: 4rem;
+    padding: 10px 5px;
+    position: relative;
+}
+
+.badge{
+    background:#363536;
+    color: white;
+    font-size: 2rem;
+    padding: 10px 10px;
+    border-radius: 12px;
+}
+
+#computer-badge{
+    position: absolute;
+    margin-top: 10px;
+    left: -75px;
+}
+
+#user-badge{
+    position: absolute;
+    margin-top: 10px;
+    right: -70px;
 }
 
 .buttons {

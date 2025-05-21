@@ -77,15 +77,15 @@ function playGame(humanSelection) {
     userChoice.textContent = `You chose: ${humanSelection}`;
 
     const computerSelection = document.querySelector("#computer-choice");
-    computerSelection.textContent = `Computer chose: ${computerChoice}`;
+    computerSelection.textContent = `CPU chose: ${computerChoice}`;
 
     playRound(humanSelection, computerChoice);
 
     const userScore = document.querySelector("#user-score");
-    userScore.textContent = `Your score: ${humanScore}`;
+    userScore.textContent = `${humanScore}`;
 
     const compScore = document.querySelector("#computer-score");
-    compScore.textContent = `Computer's score: ${computerScore}`;
+    compScore.textContent = `${computerScore}`;
 
     const result = document.querySelector(".result");
     if (humanScore === 5 || computerScore === 5) { 
@@ -113,10 +113,10 @@ resetButton.addEventListener("click", () => {
     humanScore = 0;
     computerScore = 0;
 
-    document.querySelector("#user-score").textContent = "Your score: 0";
-    document.querySelector("#computer-score").textContent = "Computer's score: 0";
+    document.querySelector("#user-score").textContent = "0";
+    document.querySelector("#computer-score").textContent = "0";
     document.querySelector("#user-choice").textContent = "You chose: ?";
-    document.querySelector("#computer-choice").textContent = "Computer chose: ?";
+    document.querySelector("#computer-choice").textContent = "CPU chose: ?";
     document.querySelector(".result").textContent = "Awaiting result...";
 
     rock.disabled = false;
