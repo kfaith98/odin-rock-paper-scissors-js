@@ -34,7 +34,7 @@ scissors.addEventListener("click", () => {
 
 function playGame(humanSelection) {
     function playRound(humanSelection, computerChoice) {
-        const result = document.querySelector(".result p");
+        const result = document.querySelector(".result");
 
         if (humanSelection === computerChoice) {
             result.textContent = "It's a tie! No score counted";
@@ -73,21 +73,21 @@ function playGame(humanSelection) {
 
     const computerChoice = getComputerChoice();
 
-    const userChoice = document.querySelector("#user-choice p");
+    const userChoice = document.querySelector("#user-choice");
     userChoice.textContent = `You chose: ${humanSelection}`;
 
-    const computerSelection = document.querySelector("#computer-choice p");
+    const computerSelection = document.querySelector("#computer-choice");
     computerSelection.textContent = `Computer chose: ${computerChoice}`;
 
     playRound(humanSelection, computerChoice);
 
-    const userScore = document.querySelector("#user-score p");
+    const userScore = document.querySelector("#user-score");
     userScore.textContent = `Your score: ${humanScore}`;
 
-    const compScore = document.querySelector("#computer-score p");
+    const compScore = document.querySelector("#computer-score");
     compScore.textContent = `Computer's score: ${computerScore}`;
 
-    const result = document.querySelector(".result p");
+    const result = document.querySelector(".result");
     if (humanScore === 5 || computerScore === 5) { 
         if (humanScore > computerScore) {
             result.textContent = "You won the game! Congratulations!!";
@@ -113,11 +113,11 @@ resetButton.addEventListener("click", () => {
     humanScore = 0;
     computerScore = 0;
 
-    document.querySelector("#user-score p").textContent = "Your score: 0";
-    document.querySelector("#computer-score p").textContent = "Computer's score: 0";
-    document.querySelector("#user-choice p").textContent = "You chose: ";
-    document.querySelector("#computer-choice p").textContent = "Computer chose: ";
-    document.querySelector(".result p").textContent = "";
+    document.querySelector("#user-score").textContent = "Your score: 0";
+    document.querySelector("#computer-score").textContent = "Computer's score: 0";
+    document.querySelector("#user-choice").textContent = "You chose: ?";
+    document.querySelector("#computer-choice").textContent = "Computer chose: ?";
+    document.querySelector(".result").textContent = "Awaiting result...";
 
     rock.disabled = false;
     paper.disabled = false;
